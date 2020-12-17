@@ -39,6 +39,11 @@ class HelloWorldController extends ControllerBase {
      * @return array
      */
     public function helloWorld(){
+        // You can just return a simple response inside using SymfonyResponse
+        // return new \Symfony\Component\HttpFoundation\Response('my text');        
+        
+        // Can also make a redirect
+        // return new \Symfony\Component\HttpFoundation\RedirectResponse('node/1');
         return [
             '#markup' => $this->salutation->getSalutation()
         ];
